@@ -1,13 +1,19 @@
-import { Fragment } from "react";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
+import Form from '../components/Form'
+import Notes from '../components/Notes'
 
-export const Home = () => {
+const Home = () => {
+  const notes = new Array(3)
+    .fill('')
+    .map((_, i) => ({ id: i, title: `Note ${i + 1}` }))
   return (
-    <Fragment>
-      <h1>Home Page</h1>
+    <>
+      <Form />
+      <hr />
+      <Notes notes={notes} />
       <Link to="/about">About this page</Link>
-    </Fragment>
-  );
-};
+    </>
+  )
+}
 
-export default Home;
+export default Home
