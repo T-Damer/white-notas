@@ -1,5 +1,10 @@
-const Alert = ({ alert }) => {
-  if (!alert) {
+import { useContext } from 'react'
+import alertContext from '../context/alert/alertContext'
+
+const Alert = () => {
+  const { alert, hide } = useContext(alertContext)
+
+  if (!alert.visible) {
     return null
   }
 
@@ -10,7 +15,7 @@ const Alert = ({ alert }) => {
     >
       <strong>Warning!</strong>
       {alert.text}
-      <button type="button" class="close" aria-label="Close">
+      <button onClick={hide} type="button" class="close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
