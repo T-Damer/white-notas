@@ -1,13 +1,13 @@
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
 
-export const Home = () => {
+export const About = () => {
   return (
     <Fragment>
-      <h1>Home Page</h1>
-      <Link to="/about">About this page</Link>
+      <h1>About page</h1>
+      <Link to="/">Go home</Link>
     </Fragment>
   );
 };
 
-export default Home;
+export default About;
