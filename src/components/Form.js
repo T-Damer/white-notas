@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react'
-import alertContext from '../context/alert/alertContext'
+import { AlertContext } from '../context/alert/alertContext'
 
 const Form = () => {
   const [value, setValue] = useState('')
-  const alert = useContext(alertContext)
+  const alert = useContext(AlertContext)
 
   const submitHandler = (event) => {
     event.preventDefault()

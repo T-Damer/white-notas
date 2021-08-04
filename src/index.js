@@ -7,10 +7,11 @@ import App from './App'
 
 ReactDOM.render(
   <React.StrictMode>
-    <AlertState></AlertState>
-    <HashRouter basename="/white-notas/">
-      <App />
-    </HashRouter>
+    <AlertState>
+      <HashRouter basename="/white-notas/">
+        <App />
+      </HashRouter>
+    </AlertState>
   </React.StrictMode>,
   document.getElementById('root')
 )
